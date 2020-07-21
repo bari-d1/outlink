@@ -199,6 +199,17 @@
       color: grey;
   }
   
+  .search-subject-results {
+      height: 70px;
+      position: relative;
+      top: -15px;
+      border: solid 1px black;
+      margin-left: 60px;
+      width: 90%;
+      text-decoration: none;
+      color: grey;
+  }
+  
   @media screen and (max-width: 1036px) {
       body {
           font-size: 12px;
@@ -269,6 +280,9 @@
           width: 90%;
           padding-left: 50px;
       }
+      .search-teacher-bar-input {
+          display: none;
+      }
       .search-subject-bar-input,
       .search-teacher-bar-input {
           font-size: 1.4em;
@@ -304,8 +318,12 @@
           margin-right: -50px;
           margin-left: -50px;
       }
+      .homepage {
+          height: 50vh;
+      }
       .home-about {
           margin-left: 30px;
+          height: 60vh;
       }
       .search {
           margin-top: 50px;
