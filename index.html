@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">s
     <title>Outlink</title>
 </head>
 
@@ -34,20 +33,16 @@
                     <li id="search-subject" class="search-subject">Subject</li>
                     <li id="search-teachers" class="search-teachers">Teachers </li>
                 </ul>
-                <div class="search-subject-bar">
-                    <input type="text" id="search-subject-bar-input" class="search-subject-bar-input" placeholder="Search for subject titles">
-                    <!-- <div class="search-subject-results"></div> -->
+                <div class="search-subject-bar dropdown">
+                    <select type="text" id="search-subject-bar-input" class="search-subject-bar-input dropbtn search-subject-results " placeholder="Search for subject titles">Search for subject titles</select>
                 </div>
                 <div class="search-teachers-bar">
                     <input type="text" class="search-teacher-bar-input" placeholder="Search for names of teachers">
                     <div class="search-teachers-results"></div>
                 </div>
-                <div class="search-location-bar">
-                    <input type="text" class="search-location-bar-input" placeholder="Location">
-
-                    <div class="location-results"></div>
+                <div class="search-location-bar dropdown">
+                    <select type="text" class="search-location-bar-input dropbtn search-location-results" placeholder="Location"></select>
                 </div>
-                <i class="fa fa-search" aria-hidden="true"></i>
             </div>
             <div class="search-right">
                 <img class="teacher" src="teacher.png" alt="teacher">

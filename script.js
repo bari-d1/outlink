@@ -5,12 +5,18 @@ let subjectList = ['Mathematics', 'Englsish Language', 'Physics', 'Chemistry', '
     'Marketing', 'Christain Religious Studies', 'Islamic Religious Studies', 'Graphic Design', 'Yoruba', 'Hausa', 'Igbo',
 ];
 const sortedSubjectList = subjectList.sort();
+let locationList = ['Abia', 'Abuja', 'Adamawa', 'Akwa-Ibom', 'Anambra', 'Bauchi', 'Bayelsa', 'Benue', 'Borno', 'Cross River', 'Delta', 'Eboyi',
+    'Edo', 'Ekiti', 'Enugu', 'Gombe', 'Imo', 'Jigawa', 'Kaduna', 'Kano', 'Katsina', 'Kebbi', 'Kogi', 'Kwara', 'Lagos', 'Nassarawa', 'Niger',
+    'Ogun', 'Ondo', 'Osun', 'Oyo', 'Plateau', 'Rivers', 'Sokoto', ' Taraba', 'Yobe', 'Zamfara'
+];
 
 const searchSubject = document.querySelector('.search-subject');
 const searchTeachers = document.querySelector('.search-teachers');
 const subjectSearchbar = document.querySelector('.search-subject-bar-input')
 const teacherSearchbar = document.querySelector('.search-teacher-bar-input')
 const locationBar = document.querySelector('.search-location-bar-input')
+const optionsContainer = document.querySelector('.search-subject-results');
+console.log(optionsContainer)
 
 
 const onSearchTeachers = () => {
@@ -35,14 +41,31 @@ searchSubject.addEventListener('click', onSearchSubject)
 
 const searchSubjectOptions = () => {
     for (let i = 0; i < subjectList.length; i++) {
-        let searchOptions = document.createElement('div');
+        let searchOptions = document.createElement('option');
+        searchOptions.text = searchOptions.value = sortedSubjectList[i];
+        // searchOptions.setAttribute('href', '#')
+        optionsContainer.add(searchOptions, 0);
         searchOptions.classList.add('search-subject-results');
-        subjectSearchbar.appendChild[searchOptions];
         console.log(searchOptions)
         searchOptions.innerHTML = sortedSubjectList[i]
-        document.body.appendChild(searchOptions);
+        subjectSearchbar.appendChild(searchOptions);
 
     }
 }
 
 searchSubjectOptions();
+
+const searchLocationsOptions = () => {
+    for (let i = 0; i < locationList.length; i++) {
+        let locationOptions = document.createElement('option');
+        locationOptions.text = locationOptions.value = locationList[i];
+        // searchOptions.setAttribute('href', '#')
+        locationBar.add(locationOptions, 0);
+        locationOptions.classList.add('search-subject-results');
+        console.log(locationOptions)
+        locationOptions.innerHTML = locationList[i]
+        locationBar.appendChild(locationOptions);
+
+    }
+}
+searchLocationsOptions();
